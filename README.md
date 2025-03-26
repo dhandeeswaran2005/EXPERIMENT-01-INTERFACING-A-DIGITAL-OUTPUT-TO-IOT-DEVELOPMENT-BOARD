@@ -1,13 +1,12 @@
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
 
-**DATE:**
 
-**NAME:**
+**NAME:Dhandeeswaran selvakumar**
 
-**ROLL NO:**
+**ROLL NO:212223110009**
 
-**DEPARTMENT:**
+**DEPARTMENT:CSE(IOT)**
 
 ## Aim
 
@@ -84,9 +83,39 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 
 ## STM 32 CUBE PROGRAM
 
-```c
-// Your STM 32 CUBE Program code here
 ```
+#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+}
+```
+
+## OUTPUT
+## OFF
+
+![WhatsApp Image 2025-03-13 at 11 41 19_ab29526c](https://github.com/user-attachments/assets/59e12d6a-1965-45ff-aad4-ea62ecaa4d46)
+
+
+## ON
+
+![WhatsApp Image 2025-03-13 at 11 41 20_16d0f6ce](https://github.com/user-attachments/assets/95ecea4e-e845-46ae-bec6-b5d72710c574)
+
+## Result
+
+Interfacing a digital output with ARM microcontroller based IOT development is executed and the results are verified.
 
 ## OUTPUT
 
